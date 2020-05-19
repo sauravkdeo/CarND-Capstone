@@ -40,6 +40,7 @@ class WaypointUpdater(object):
         self.final_waypoints_pub = rospy.Publisher('final_waypoints', Lane, queue_size=1)
 
         # TODO: Add other member variables you need below
+        self.vehicle_velocity = None 
         self.pose = None
         self.base_waypoints = None
         self.waypoints_2d = None
@@ -55,6 +56,9 @@ class WaypointUpdater(object):
                 closest_waypoint_idx = self.get_closest_waypoint_idx()
                 self.publish_waypoints(closest_waypoint_idx)
             rate.sleep()
+            
+    def velocity_cb(self, velocity):
+        self.vehicle_velocity = velocity.twist.linear.x
     
     def get_closest_waypoint_idx(self) :
         x = self.pose.pose.position.x
