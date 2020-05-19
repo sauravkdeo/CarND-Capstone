@@ -57,4 +57,4 @@ if __name__ == '__main__':
     app = socketio.WSGIApp(sio)
 
     # deploy as an gevent WSGI server
-    pywsgi.WSGIServer(('', 4567), app, handler_class=WebSocketHandler).serve_forever()
+    pywsgi.WSGIServer(('127.0.0.1', 4567), app, handler_class=WebSocketHandler).serve_forever()
