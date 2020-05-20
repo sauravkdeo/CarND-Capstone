@@ -52,7 +52,7 @@ class WaypointUpdater(object):
     def loop(self): # To target a frequency of 50 Hz
         rate = rospy.Rate(50) 
         while not rospy.is_shutdown():
-            if self.pose and self.base_lane:
+            if self.pose and self.base_waypoints:
                 closest_waypoint_idx = self.get_closest_waypoint_idx()
                 self.publish_waypoints(closest_waypoint_idx)
             rate.sleep()
