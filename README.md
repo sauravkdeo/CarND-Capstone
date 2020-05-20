@@ -6,13 +6,13 @@ Team members is provided in the table below:
 
 | Full Name                  | Email                         |
 | :------------------------- | :---------------------------- |
-| Saurav Kumar (Team Leader) | saurav.kdeo@gmail.com         |
-| David Dudas                | david@revolutionrobotics.org  |
+| David Dudas (Team Leader)  |  david@revolutionrobotics.org |
+| Saurav Kumar               | saurav.kdeo@gmail.com         |
 | 叶莉萍                      | 373049041@qq.com              |
 | Yolanda de la Hoz          | yolanda93h@gmail.com          |
 | Ahmad Sheikhveisi          | ahmad.sheikhveisi87@gmail.com |
 
-
+ 
 ___
 
 Please use **one** of the two installation options, either native **or** docker installation.
