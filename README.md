@@ -15,6 +15,17 @@ Team members is provided in the table below:
  
 ___
 
+### Notes about traffic light detection and classification
+* For traffic light detection we used the MS COCO dataset class as a pre-trainer [ssd_mobilenet_v1_coco](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_11_06_2017.tar.gz) from https://github.com/tensorflow/models/blob/master/research/object_detection/g3doc/detection_model_zoo.md
+* Pre processing: image is resized to 300x300 pixel in RGB format
+* Traffic light is class 10, so we use detections only with this class
+* We select the highest probability traffic light
+* We crop a small image based on bounding box coordinates (with small padding)
+* Color classification is calculated based on the number of high intensity red and green pixels on the cropped image
+
+
+___
+
 Please use **one** of the two installation options, either native **or** docker installation.
 
 ### Native Installation
